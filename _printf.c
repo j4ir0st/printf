@@ -18,7 +18,29 @@ int _printf(const char *format, ...)
 		{
 			switch (*(format + c + 1))
 			{
+			case 'c': /* char */
+				_putchar(va_arg(ptr, int));
+				c++;
+				break;
 
+			case 's': /* string */
+				_puts(va_arg(ptr, char *));
+				c++;
+				break;
+			case 'd': /* decimal */
+				num = va_arg (ptr, int);
+				_print_number(num);
+				c++;
+				break;
+			case 'i': /* integer */
+				num = va_arg (ptr, int);
+				_print_number(num);
+				c++;
+				break;
+			default:
+				_putchar('%');
+				c++;
+				continue;
 			}
 		}
 		else
