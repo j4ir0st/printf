@@ -1,4 +1,4 @@
-.TH _PRINTF 3 06/11/2021 "Holberton(Jairo, Haru)" .B MANUAL DE _printf
+.TH _PRINTF 3 06/11/2021 "Holberton(Jairo, Haru)" "MANUAL DE _printf"
 
 .SH NAME
 _printf - Our own Version of the function printf
