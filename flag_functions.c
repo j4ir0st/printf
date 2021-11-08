@@ -26,10 +26,6 @@ int f_s(va_list list)
 	{
 		_puts(x);
 	}
-	else
-	{
-		_puts("");
-	}
 	return (0);
 }
 
