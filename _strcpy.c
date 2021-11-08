@@ -4,7 +4,7 @@
  * @dest: char address argument
  * @src: char argument
  * Return: returns dest argument
- *  */
+ */
 
 char *_strcpy(char *dest, char *src)
 {
