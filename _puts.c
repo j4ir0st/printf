@@ -11,7 +11,7 @@ int _puts(char *c)
 {
 	int len;
 
-	len = _strlen(c);
+	len = _strlen(c) + 1;
 
 	return (write(1, c, len));
 }
