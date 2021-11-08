@@ -25,7 +25,7 @@ with the conversion specifier.
 .B Flag characters
        The character % is the flag definer.
 
-   Conversion specifiers
+.B Conversion specifiers
        A character that specifies the type of conversion to be applied.
        The conversion specifiers and their meanings are:
 
@@ -53,3 +53,57 @@ with the conversion specifier.
               null byte need be present; if the precision is not
               specified, or is greater than the size of the array, the
               array must contain a terminating null byte.
+
+	      If an l modifier is present: the const wchar_t * argument
+	      is expected to be a pointer to an array of wide
+	      characters.  Wide characters from the array are converted
+	      to multibyte characters (each by a call to the wcrtomb(3)
+	      function, with a conversion state starting in the initial
+	      state before the first wide character), up to and
+	      including a terminating null wide character.  The
+	      resulting multibyte characters are written up to (but not
+	      including) the terminating null byte.  If a precision is
+	      specified, no more bytes than the number specified are
+	      written, but no partial multibyte characters are written.
+	      Note that the precision determines the number of bytes
+	      written, not the number of wide characters or screen
+	      positions.  The array must contain a terminating null wide
+	      character, unless a precision is given and it is so small
+	      that the number of bytes written exceeds it before the end
+	      of the array is reached.
+	      
+	%      A '%' is written.  No argument is converted.  The complete
+	       conversion specification is '%%'.
+	 
+.SH RETURN VALUE  
+	Upon successful return, these functions return the number of
+	characters printed (excluding the null byte used to end output to
+	strings).
+
+	The functions snprintf() and vsnprintf() do not write more than
+	size bytes (including the terminating null byte ('\0')).  If the
+	output was truncated due to this limit, then the return value is
+	the number of characters (excluding the terminating null byte)
+	which would have been written to the final string if enough space
+	had been available.  Thus, a return value of size or more means
+	that the output was truncated.  (See also below under NOTES.)
+
+	If an output error is encountered, a negative value is returned.
+
+.SH EXAMPLES
+.nf
+#include "main.h"
+
+int main(void) 
+{
+	int len;
+	len = _printf("Let's try to printf a simple sentence.\n");
+	_printf("Character:[%c]\n", 'H');
+	_printf("String:[%s]\n", "I am a string !");
+	_printf("Negative:[%d]\n", -762534);
+	_printf("Length:[%d, %i]\n", len, len);
+}
+.fi
+
+.SH SEE ALSO
+printf(3)
