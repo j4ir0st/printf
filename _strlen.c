@@ -5,6 +5,7 @@
  * @s: pointer of parameter
  * Return: return n's value
  */
+
 int _strlen(char *s)
 {
 	int n = 0; /* Contador de caracteres */
@@ -15,5 +16,5 @@ int _strlen(char *s)
 		s++; /* La direccion de s aumenta en 1 */
 	}
 
-	return(n); /* Retorna el valor final de n */
+	return (n); /* Retorna el valor final de n */
 }
