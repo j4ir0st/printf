@@ -1,14 +1,20 @@
 #include "main.h"
-
 /**
  * get_flag - function for getting de value after %
  * @s: pointer of parameter
- * @list: a structure argument
  * Return: return flags function or 0 if doesn´t match
  */
 
 int (*get_flag(const char *s))(va_list list)
 {
+	flag_t flags[] = {
+		{"c", f_c},
+		{"s", f_s},
+		{"i", f_i},
+		{"d", f_d},
+		{NULL, NULL}
+	};
+
 	int i = 0;
 
 	while (i < 4)
@@ -19,5 +25,5 @@ int (*get_flag(const char *s))(va_list list)
 		}
 		i++;
 	}
-	return(0);
+	return (0);
 }
