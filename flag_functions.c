@@ -20,7 +20,15 @@ int f_c(va_list list)
 
 int f_s(va_list list)
 {
-	_puts(va_arg(list, char *));
+	char *x = va_arg(list, char *);
+	if (x != NULL)
+	{
+		_puts(x);
+	}
+	else
+	{
+		_puts(NULL);
+	}
 	return (0);
 }
 
