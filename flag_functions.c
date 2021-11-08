@@ -9,7 +9,7 @@
 int f_c(va_list list)
 {
 	_putchar(va_arg(list, int));
-	return (0);
+	return (1);
 }
 
 /**
@@ -24,7 +24,7 @@ int f_s(va_list list)
 
 	if (x != NULL)
 	{
-		_puts(x);
+		return (_puts(x));
 	}
 	return (0);
 }
