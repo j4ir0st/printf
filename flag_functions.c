@@ -21,13 +21,14 @@ int f_c(va_list list)
 int f_s(va_list list)
 {
 	char *x = va_arg(list, char *);
+
 	if (x != NULL)
 	{
 		_puts(x);
 	}
 	else
 	{
-		_puts(NULL);
+		_puts("");
 	}
 	return (0);
 }
