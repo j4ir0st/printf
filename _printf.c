@@ -8,7 +8,7 @@
 
 int _printf(const char *format, ...)
 {
-	int c = 0;
+	int c = 0, b = 0;
 	int (*r_flag)(va_list list);
 	va_list ptr;
 
@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	{
 		if (*(format + c) == '%' && *(format + c + 1) == '%')
 		{
-			_putchar('%');
+			b += _putchar('%');
 			c++;
 		}
 		else if (*(format + c) == '%')
@@ -27,18 +27,17 @@ int _printf(const char *format, ...)
 
 			if (r_flag != NULL)
 			{
-				r_flag(ptr);
+				b += r_flag(ptr);
 				c++;
 			}
 		}
 		else
 		{
-			_putchar(*(format + c));
+			b += _putchar(*(format + c));
 		}
 		c++;
 	}
 
 	va_end(ptr);
-
-	return (c);
+	return (b);
 }
