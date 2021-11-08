@@ -30,6 +30,11 @@ int _printf(const char *format, ...)
 				b += r_flag(ptr);
 				c++;
 			}
+			else
+			{
+				c++;
+				b++;
+			}
 		}
 		else
 		{
