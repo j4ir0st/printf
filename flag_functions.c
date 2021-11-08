@@ -32,11 +32,11 @@ int f_s(va_list list)
 
 int f_d(va_list list)
 {
-    int num;
+	int num;
 
-    num = va_arg (list, int);
-    _print_number(num);
-    return (0);
+	num = va_arg(list, int);
+	_print_number(num);
+	return (0);
 }
 
 /**
@@ -47,9 +47,10 @@ int f_d(va_list list)
 
 int f_i(va_list list)
 {
-    int num;
 
-    num = va_arg (list, int);
-    _print_number(num);
-    return (0);
+	int num;
+
+	num = va_arg(list, int);
+	_print_number(num);
+	return (0);
 }
