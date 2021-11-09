@@ -26,6 +26,7 @@ int (*get_flag(const char *s))(va_list list)
 		}
 		i++;
 	}
+	_putchar('%');
 
 	return (0);
 }
