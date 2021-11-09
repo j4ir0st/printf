@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 
 			if (r_flag != NULL)
 			{
-				b += r_flag(ptr) - 1;
+				b += r_flag(ptr);
 				c++;
 			}
 			else
