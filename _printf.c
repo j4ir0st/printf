@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 			{
 				b++;
 				c++;
-                        }
+			}
 		}
 		else
 		{

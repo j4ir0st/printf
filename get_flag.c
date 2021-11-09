@@ -26,7 +26,7 @@ int (*get_flag(const char *s))(va_list list)
 		}
 		i++;
 	}
-	if(flags[i].f != NULL)
+	if (flags[i].f != NULL)
 	{
 		_putchar('%');
 	}
