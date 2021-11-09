@@ -3,10 +3,11 @@
  * _print_number - function to print numbers
  *
  * @n: Parameter
+ * @base: parameter base
  */
-void _print_number(int n)
+void _print_number(int n, int base)
 {
-	unsigned int n1;
+	int n1;
 
 	if (n < 0)
 	{
@@ -18,10 +19,10 @@ void _print_number(int n)
 		n1 = n;
 	}
 
-	if (n1 / 10)
+	if (n1 / base)
 	{
-		_print_number(n1 / 10);
+		_print_number(n1 / base);
 	}
 
-	_putchar((n1 % 10) + '0');
+	_putchar((n1 % base) + '0');
 }
