@@ -86,6 +86,6 @@ int f_i(va_list list)
 
 int f_prc(va_list list)
 {
-	_putchar('%');
+	list += _putchar('%');
 	return (1);
 }
