@@ -21,7 +21,7 @@ void _print_number(int n, int base)
 
 	if (n1 / base)
 	{
-		_print_number(n1 / base);
+		_print_number(n1 / base, base);
 	}
 
 	_putchar((n1 % base) + '0');
