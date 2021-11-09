@@ -33,6 +33,11 @@ int _printf(const char *format, ...)
 				b += r_flag(ptr);
 				c++;
 			}
+			else if (*(format + c + 1) != 92)
+			{
+				b++;
+				c++;
+                        }
 		}
 		else
 		{
