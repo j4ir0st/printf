@@ -22,10 +22,6 @@ int _printf(const char *format, ...)
 	{
 		if (*(format + c) == '%')
 		{
-			while (*(format + c + 1) == ' ')
-			{
-				c++;
-			}
 			r_flag = get_flag(format + c + 1);
 			if (r_flag != NULL)
 			{
@@ -36,7 +32,7 @@ int _printf(const char *format, ...)
 			{
 				if (*(format + c + 1) == '\0')
 					return (-1);
-				_putchar('%');
+				b += _putchar('%');
 			}
 		}
 		else
