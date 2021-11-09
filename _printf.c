@@ -20,12 +20,7 @@ int _printf(const char *format, ...)
 	}
 	while (format != NULL && *(format + c) != '\0')
 	{
-		if (*(format + c) == '%' && *(format + c + 1) == '%')
-		{
-			b += _putchar('%');
-			c++;
-		}
-		else if (*(format + c) == '%')
+		if (*(format + c) == '%')
 		{
 			r_flag = get_flag(format + c + 1);
 
@@ -37,7 +32,6 @@ int _printf(const char *format, ...)
 			else
 			{
 				b++;
-				c++;
 			}
 		}
 		else
