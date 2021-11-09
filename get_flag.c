@@ -18,7 +18,7 @@ int (*get_flag(const char *s))(va_list list)
 
 	int i = 0;
 
-	while (i < 4)
+	while (i < 5)
 	{
 		if (s[0] == flags[i].flag[0])
 		{
@@ -26,6 +26,6 @@ int (*get_flag(const char *s))(va_list list)
 		}
 		i++;
 	}
-	_putchar('%');
+
 	return (0);
 }
