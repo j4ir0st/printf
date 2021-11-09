@@ -20,6 +20,8 @@ int _printf(const char *format, ...)
 	}
 	while (format != NULL && *(format + c) != '\0')
 	{
+		if (*(format + c) == '%')
+		{
 			r_flag = get_flag(format + c + 1);
 			if (r_flag != NULL)
 			{
