@@ -22,15 +22,15 @@ int _printf(const char *format, ...)
 	{
 		if (*(format + c) == '%')
 		{
+			while (*(format + c + 1) == ' ')
+			{
+				c++;
+			}
 			r_flag = get_flag(format + c + 1);
 			if (r_flag != NULL)
 			{
 				b += r_flag(ptr);
 				c++;
-			}
-			else if (*(format + c + 1) == '\0')
-			{
-				return (-1);
 			}
 			else if (*(format + c + 1) != 92)
 			{
