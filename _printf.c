@@ -29,10 +29,6 @@ int _printf(const char *format, ...)
 				b += r_flag(ptr);
 				c++;
 			}
-			else
-			{
-				return (1);
-			}
 		}
 		else
 		{
