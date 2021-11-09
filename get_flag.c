@@ -12,6 +12,7 @@ int (*get_flag(const char *s))(va_list list)
 		{"s", f_s},
 		{"i", f_i},
 		{"d", f_d},
+		{"%", f_prc},
 		{NULL, NULL}
 	};
 
