@@ -32,10 +32,11 @@ int _printf(const char *format, ...)
 				b += r_flag(ptr);
 				c++;
 			}
-			else if (*(format + c + 1) != 92)
+			else
 			{
-				b++;
-				c++;
+				if (*(format + c + 1) == '\0')
+					return (-1);
+				_putchar('%');
 			}
 		}
 		else
