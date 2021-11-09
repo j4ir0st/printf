@@ -31,13 +31,12 @@ int _printf(const char *format, ...)
 
 			if (r_flag != NULL)
 			{
-				b += r_flag(ptr);
+				b += r_flag(ptr) - 1;
 				c++;
 			}
 			else
 			{
 				c++;
-				b++;
 			}
 		}
 		else
