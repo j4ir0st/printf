@@ -20,23 +20,6 @@ int _printf(const char *format, ...)
 	}
 	while (format != NULL && *(format + c) != '\0')
 	{
-		if (*(format + c) == '%')
-		{
-			if (format[c + 1] == ' ')
-                        {
-				if (format[c + 2] >= 48 && format[c + 2] <= 57)
-				{
-					return (-1);
-				}
-				else if (format[c + 2] == 32)
-				{
-					return (-1);
-				}
-			}
-			if (format[c + 1] >= 48 && format[c + 1] <= 57)
-			{
-				return (-1);
-			}
 			r_flag = get_flag(format + c + 1);
 			if (r_flag != NULL)
 			{
