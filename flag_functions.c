@@ -40,7 +40,7 @@ int f_d(va_list list)
 	int num, c = 0;
 
 	num = va_arg(list, int);
-	_print_number(num);
+	_print_number(num, 10);
 	if (num == 0)
 	{
 		c++;
@@ -65,7 +65,7 @@ int f_i(va_list list)
 	int num, c = 0;
 
 	num = va_arg(list, int);
-	_print_number(num);
+	_print_number(num, 10);
 	if (num == 0)
 	{
 		c++;
