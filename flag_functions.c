@@ -77,3 +77,15 @@ int f_i(va_list list)
 	}
 	return (c);
 }
+
+/**
+ * f_prc - function to print percent flag
+ * @list: parameter with the variable arguments
+ * Return: 0 on Success
+ */
+
+int f_prc(va_list list)
+{
+	_putchar('%');
+	return (1);
+}
