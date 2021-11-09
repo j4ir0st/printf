@@ -40,5 +40,6 @@ int _printf(const char *format, ...)
 		}
 		c++;
 	}
+	va_end(ptr);
 	return (b);
 }
