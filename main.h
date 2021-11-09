@@ -14,7 +14,7 @@ char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 int _printf(const char *format, ...);
 int c_flag(const char *str);
-void _print_number(int n);
+void _print_number(int n, int base);
 /* ************* */
 int s_flags(va_list list, const char *x);
 /* ************* */
@@ -36,5 +36,6 @@ int f_c(va_list list);
 int f_s(va_list list);
 int f_d(va_list list);
 int f_i(va_list list);
+int f_prc(va_list list);
 /* ************* */
 #endif
