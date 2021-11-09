@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 	{
-		exit(255);
+		return (-1);
 	}
 	while (format != NULL && *(format + c) != '\0')
 	{
