@@ -30,7 +30,10 @@ int _printf(const char *format, ...)
 				c++;
 			}
 		}
-		b += _putchar(*(format + c));
+		else
+		{
+			b += _putchar(*(format + c));
+		}
 		c++;
 	}
 	va_end(ptr);
