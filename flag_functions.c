@@ -22,11 +22,11 @@ int f_s(va_list list)
 {
 	char *x = va_arg(list, char *);
 
-	/*if (x != NULL)
-	{*/
+	if (x != NULL)
+	{
 		return (_puts(x));
-	/*}
-	return (_puts("(null)"));*/
+	}
+	return (_puts("(null)"));
 }
 
 /**
