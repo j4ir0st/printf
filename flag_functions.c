@@ -37,11 +37,20 @@ int f_s(va_list list)
 
 int f_d(va_list list)
 {
-	int num;
+	int num, c = 0;
 
 	num = va_arg(list, int);
 	_print_number(num);
-	return (0);
+	if (num == 0)
+	{
+		c++;
+	}
+	while (num % 10 > 0)
+	{
+		num = num / 10;
+		c++;
+	}
+	return (c + 1);
 }
 
 /**
@@ -53,9 +62,18 @@ int f_d(va_list list)
 int f_i(va_list list)
 {
 
-	int num;
+	int num, c = 0;
 
 	num = va_arg(list, int);
 	_print_number(num);
-	return (0);
+	if (num == 0)
+	{
+		c++;
+	}
+	while (num % 10 > 0)
+	{
+		num = num / 10;
+		c++;
+	}
+	return (c + 1);
 }
