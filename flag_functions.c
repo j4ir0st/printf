@@ -50,7 +50,7 @@ int f_d(va_list list)
 		num = num / 10;
 		c++;
 	}
-	return (c + 1);
+	return (c);
 }
 
 /**
@@ -75,5 +75,5 @@ int f_i(va_list list)
 		num = num / 10;
 		c++;
 	}
-	return (c + 1);
+	return (c);
 }
