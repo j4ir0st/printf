@@ -26,7 +26,7 @@ int f_s(va_list list)
 	{
 		return (_puts(x));
 	}
-	return ("(null)");
+	return (_puts("(null)"));
 }
 
 /**
