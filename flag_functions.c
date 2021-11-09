@@ -37,7 +37,7 @@ int f_s(va_list list)
 
 int f_d(va_list list)
 {
-	unsigned int num, c = 0;
+	int num, c = 0;
 
 	num = va_arg(list, int);
 	_print_number(num, 10);
@@ -66,7 +66,7 @@ int f_d(va_list list)
 int f_i(va_list list)
 {
 
-	unsigned int num, c = 0;
+	int num, c = 0;
 
 	num = va_arg(list, int);
 	_print_number(num, 10);
