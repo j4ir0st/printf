@@ -28,11 +28,9 @@ int _printf(const char *format, ...)
 				b += r_flag(ptr);
 				c++;
 			}
-			else if (format[c + 1] != '\0')
+			else if (*(format + c + 1) == '\0')
 			{
-				_putchar(format[c]);
-				c--;
-				b++;
+				return (-1);
 			}
 			else if (*(format + c + 1) != 92)
 			{
