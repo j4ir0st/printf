@@ -15,8 +15,7 @@ write output to stdout, the standard output stream.
 .P
 
 .SS Format of the format string
-
-.PP
+.P
 The format string is a character string, beginning and ending in its initial shift state, if
 any. The format string is composed of zero or more directives: ordinary characters (not %),
 which are copied unchanged to the output stream; and conversion specifications, each of which
@@ -24,18 +23,20 @@ results in fetching zero or more subsequent arguments.  Each conversion specific
 introduced by the character %, and ends with a conversion specifier. In between there may be
 (in this order) zero or more flags, an optional minimum field width, an optional precision
 and an optional length modifier.
-
+.P
 The overall syntax of a conversion specification is:
+.P
 .nf
         %[flags]conversion
 .ni
+.P
 The arguments must correspond properly (after type promotion)
 with the conversion specifier.
 
-.B Flag characters
+.SS 1 Flag characters
        The character % is the flag definer.
 
-.B Conversion specifiers
+.SS 1 Conversion specifiers
        A character that specifies the type of conversion to be applied.
        The conversion specifiers and their meanings are:
 
