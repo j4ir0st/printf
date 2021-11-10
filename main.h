@@ -35,5 +35,6 @@ int f_s(va_list list);
 int f_d(va_list list);
 int f_i(va_list list);
 int f_prc(va_list list);
+int f_b(va_list list);
 /* ************* */
 #endif
