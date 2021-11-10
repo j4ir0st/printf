@@ -7,13 +7,23 @@ _printf - Our own Version of the function printf
 int _printf(const char *restrict format, ...);
 
 .SH DESCRIPTION
-The functions in the _printf() produce output according to a format as described below.  The functions printf() write output to stdout, the standard output stream.
-.PP
+The functions in the
+.B _printf()
+produce output according to a format as described below. The functions
+.B printf()
+write output to stdout, the standard output stream.
+.P
 
-.B Format of the format string
+.SS Format of the format string
 
 .PP
-The format string is a character string, beginning and ending in its initial shift state, if any. The format string is composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments.  Each conversion specification is introduced by the character %, and ends with a conversion specifier.  In between there may be (in this order) zero or more flags, an optional minimum field width, an optional precision and an optional length modifier.
+The format string is a character string, beginning and ending in its initial shift state, if
+any. The format string is composed of zero or more directives: ordinary characters (not %),
+which are copied unchanged to the output stream; and conversion specifications, each of which
+results in fetching zero or more subsequent arguments.  Each conversion specification is
+introduced by the character %, and ends with a conversion specifier. In between there may be
+(in this order) zero or more flags, an optional minimum field width, an optional precision
+and an optional length modifier.
 
 The overall syntax of a conversion specification is:
 .nf
