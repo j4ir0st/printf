@@ -13,12 +13,13 @@ int (*get_flag(const char *s))(va_list list)
 		{"i", f_i},
 		{"d", f_d},
 		{"%", f_prc},
+		{"b", f_b},
 		{NULL, NULL}
 	};
 
 	int i = 0;
 
-	while (i < 5)
+	while (i < 6)
 	{
 		if (s[0] == flags[i].flag[0])
 		{
